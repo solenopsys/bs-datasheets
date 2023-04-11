@@ -6,7 +6,7 @@
   "prefix": "app",
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:browser",
+      "executor": "@angular-devkit/build-angular:browser-esbuild",
       "outputs": [
         "{options.outputPath}"
       ],
@@ -20,7 +20,12 @@
         "tsConfig": "packages/fr-datasheets/tsconfig.app.json",
         "assets": [
           "packages/fr-datasheets/src/favicon.ico",
-          "packages/fr-datasheets/src/assets"
+          "packages/fr-datasheets/src/assets",
+          {
+            "glob": "**/*",
+            "input": "node_modules/ng2-pdfjs-viewer/pdfjs",
+            "output": "/assets/pdfjs"
+          }
         ],
         "styles": [
           "packages/fr-datasheets/src/styles.css"

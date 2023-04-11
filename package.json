@@ -1,0 +1,11 @@
+{
+  "name": "@solenopsys/fr-datasheets",
+  "version": "0.1.1",
+  "dependencies": {
+    "ng2-pdfjs-viewer": "^15.0.0"
+  },
+  "scripts": {
+    "test": "node index.js",
+    "build": "etsc"
+  }
+}
