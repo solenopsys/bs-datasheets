@@ -1,20 +1,10 @@
 {
+  "extends": "../../../tsconfig.develop.json",
   "compilerOptions": {
-    "target": "es2022",
-    "useDefineForClassFields": false
+    "rootDir": "../../../",
+    "types": []
   },
-  "files": [],
-  "include": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.spec.json"
-    },
-    {
-      "path": "./tsconfig.editor.json"
-    }
-  ],
-  "extends": "../../tsconfig.base.json"
+  "files": ["src/main.ts", "src/polyfills.ts"],
+  "include": ["src/**/*.d.ts"],
+  "exclude": [ "**/*.test.ts", "**/*.spec.ts"]
 }
